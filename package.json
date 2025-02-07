@@ -6,8 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "post-update": "echo \"codesandbox preview only, need an update\" && pnpm update --latest"
+    "lint": "next lint"
   },
   "dependencies": {
     "@emotion/cache": "latest",
@@ -19,7 +18,8 @@
     "@mui/material-nextjs": "latest",
     "next": "latest",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "sass": "^1.84.0"
   },
   "devDependencies": {
     "@types/node": "latest",
