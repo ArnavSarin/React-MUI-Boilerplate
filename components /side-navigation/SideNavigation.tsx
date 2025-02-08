@@ -28,15 +28,6 @@ const SideNavigation = ({
     return (
         <Box className={styles.sideNavBox} id={'sideNavBox'}>
             <Drawer
-                sx={{
-                    '& .MuiPaper-root': {
-                        visibility: 'unset !important',
-                        transform: 'unset !important',
-                        boxSizing: 'border-box',
-                        width: '15em',
-                        height: '100%',
-                    },
-                }}
                 className={styles.sideNavDrawer}
                 id={id ?? 'sideNavDrawer'}
                 variant={variant ?? 'persistent'}
@@ -63,18 +54,6 @@ const SideNavigation = ({
                                     key={index}
                                     selected={selectedIndex === index}
                                     onClick={() => handleListItemClick(index)}
-                                    sx={{
-                                        '&.Mui-selected': {
-                                            color: '#FFFFFF',
-                                            backgroundColor: '#E2B281',
-                                            borderRadius: '8px',
-                                        },
-                                        '&.Mui-selected:hover': {
-                                            color: '#FFFFFF',
-                                            backgroundColor: '#E2B281',
-                                            borderRadius: '8px',
-                                        },
-                                    }}
                                 >
                                     {item.icon &&
                                         ((<item.icon />) as ReactNode)}
