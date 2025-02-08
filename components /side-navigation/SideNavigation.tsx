@@ -19,16 +19,12 @@ const SideNavigation = ({
     sideNavChildren,
     ...props
 }: SideNavigationProps) => {
-    const [selectedIndex, setSelectedIndex] = useState(1);
+    const [selectedIndex, setSelectedIndex] = useState(0);
 
-    const handleListItemClick = (
-        event: React.MouseEvent<HTMLDivElement, MouseEvent>,
-        index: number
-    ) => {
+    const handleListItemClick = (index: number) => {
         setSelectedIndex(index);
     };
 
-    console.log(navigationList);
     return (
         <Box className={styles.sideNavBox} id={'sideNavBox'}>
             <Drawer
@@ -47,15 +43,15 @@ const SideNavigation = ({
                 anchor={anchor ?? 'left'}
                 {...props}
             >
-                {/*<Box>*/}
-                {/*    <IconButton onClick={handleDrawerClose}>*/}
-                {/*        {theme.direction === 'rtl' ? (*/}
-                {/*            <ChevronLeftIcon />*/}
-                {/*        ) : (*/}
-                {/*            <ChevronRightIcon />*/}
-                {/*        )}*/}
-                {/*    </IconButton>*/}
-                {/*</Box>*/}
+                <Box>
+                    {/*<IconButton onClick={handleDrawerClose}>*/}
+                    {/*    {theme.direction === 'rtl' ? (*/}
+                    {/*        <ChevronLeftIcon />*/}
+                    {/*    ) : (*/}
+                    {/*        <ChevronRightIcon />*/}
+                    {/*    )}*/}
+                    {/*</IconButton>*/}
+                </Box>
                 <List className={styles.sideNavList} id={'sideNavList'}>
                     {
                         navigationList.map((item, index) => (
@@ -64,14 +60,28 @@ const SideNavigation = ({
                                 key={item.name}
                             >
                                 <ListItemButton
+                                    key={index}
                                     selected={selectedIndex === index}
-                                    onClick={(event) =>
-                                        handleListItemClick(event, index)
-                                    }
+                                    onClick={() => handleListItemClick(index)}
+                                    sx={{
+                                        '&.Mui-selected': {
+                                            color: '#FFFFFF',
+                                            backgroundColor: '#E2B281',
+                                            borderRadius: '8px',
+                                        },
+                                        '&.Mui-selected:hover': {
+                                            color: '#FFFFFF',
+                                            backgroundColor: '#E2B281',
+                                            borderRadius: '8px',
+                                        },
+                                    }}
                                 >
                                     {item.icon &&
-                                        ((<item.itemIcon />) as ReactNode)}
-                                    <ListItemText primary={item.name} />
+                                        ((<item.icon />) as ReactNode)}
+                                    <ListItemText
+                                        className={styles.itemText}
+                                        primary={item.name}
+                                    />
                                 </ListItemButton>
                             </ListItem>
                         )) as ReactNode[]

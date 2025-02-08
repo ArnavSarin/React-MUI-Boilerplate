@@ -3,12 +3,25 @@ import SideNavigation from '../components /side-navigation/SideNavigation';
 import { Button } from '@mui/material';
 import Link from '@mui/material/Link';
 import Box from '@mui/material/Box';
+import AccountBoxIcon from '@mui/icons-material/AccountBox';
+import { SideNavigationItem } from '../components /side-navigation/types';
 
-export default function About() {
+export default function Example() {
     return (
         <SideNavigation
             open={true}
-            navigationList={[{ name: 'Test' }, { name: 'Test2' }]}
+            navigationList={
+                [
+                    {
+                        name: 'Item 1',
+                        icon: () => <AccountBoxIcon />,
+                    },
+                    {
+                        name: 'Item 2',
+                        icon: () => <AccountBoxIcon />,
+                    },
+                ] as SideNavigationItem[]
+            }
             sideNavChildren={
                 (
                     <Box sx={{ maxWidth: 'sm' }}>

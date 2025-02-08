@@ -136,7 +136,7 @@
   resolved "https://registry.yarnpkg.com/@emotion/memoize/-/memoize-0.9.0.tgz#745969d649977776b43fc7648c556aaa462b4102"
   integrity sha512-30FAj7/EoJ5mwVPOWhAyCX+FPfMDrVecJAM+Iw9NRoSl4BBAQeqj4cApHHUXOVvIPgLVDsCFoz/hGD+5QQD1GQ==
 
-"@emotion/react@latest":
+"@emotion/react@^11.14.0":
   version "11.14.0"
   resolved "https://registry.yarnpkg.com/@emotion/react/-/react-11.14.0.tgz#cfaae35ebc67dd9ef4ea2e9acc6cd29e157dd05d"
   integrity sha512-O000MLDBDdk/EohJPFUqvnp4qnHeYkVP5B0xEG0D/L7cOKP9kefu2DXn8dj74cQfsEzUqh+sr1RzFqiL1o+PpA==
@@ -176,7 +176,7 @@
   resolved "https://registry.yarnpkg.com/@emotion/sheet/-/sheet-1.4.0.tgz#c9299c34d248bc26e82563735f78953d2efca83c"
   integrity sha512-fTBW9/8r2w3dXWYM4HCB1Rdp8NLibOw2+XELH5m5+AkWiL/KqYX6dc0kKYlaYyKjrQ6ds33MCdMPEwgs2z1rqg==
 
-"@emotion/styled@latest":
+"@emotion/styled@^11.14.0":
   version "11.14.0"
   resolved "https://registry.yarnpkg.com/@emotion/styled/-/styled-11.14.0.tgz#f47ca7219b1a295186d7661583376fcea95f0ff3"
   integrity sha512-XxfOnXFffatap2IyCeJyNov3kiDQWoR08gPUQxvbL7fxKryGBKUZUkG6Hz48DZwVrJSVh9sJboyV1Ds4OW6SgA==
@@ -454,7 +454,7 @@
   resolved "https://registry.yarnpkg.com/@mui/core-downloads-tracker/-/core-downloads-tracker-6.4.3.tgz#aa9506e4d43e02d61fb82e23de9741fd24b22b61"
   integrity sha512-hlyOzo2ObarllAOeT1ZSAusADE5NZNencUeIvXrdQ1Na+FL1lcznhbxfV5He1KqGiuR8Az3xtCUcYKwMVGFdzg==
 
-"@mui/icons-material@latest":
+"@mui/icons-material@^6.4.3":
   version "6.4.3"
   resolved "https://registry.yarnpkg.com/@mui/icons-material/-/icons-material-6.4.3.tgz#11f275781f442f864ca5522a6196a0a17cc063ea"
   integrity sha512-3IY9LpjkwIJVgL/SkZQKKCUcumdHdQEsJaIavvsQze2QEztBt0HJ17naToN0DBBdhKdtwX5xXrfD6ZFUeWWk8g==
@@ -468,7 +468,7 @@
   dependencies:
     "@babel/runtime" "^7.26.0"
 
-"@mui/material@latest":
+"@mui/material@^6.4.3":
   version "6.4.3"
   resolved "https://registry.yarnpkg.com/@mui/material/-/material-6.4.3.tgz#18cb003b6526bf4b3ad6f2bb46ab53154a51b19f"
   integrity sha512-ubtQjplbWneIEU8Y+4b2VA0CDBlyH5I3AmVFGmsLyDe/bf0ubxav5t11c8Afem6rkSFWPlZA2DilxmGka1xiKQ==
