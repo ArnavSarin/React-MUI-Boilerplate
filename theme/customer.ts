@@ -9,7 +9,7 @@ export const poppins = Poppins({
 });
 
 // Create a theme instance.
-const exampleTheme = createTheme({
+const customerTheme = createTheme({
     palette: {
         primary: {
             main: '#556cd6',
@@ -57,4 +57,4 @@ const exampleTheme = createTheme({
     },
 });
 
-export default exampleTheme;
+export default customerTheme;
