@@ -12,16 +12,19 @@ import {
     DocumentHeadTags,
     DocumentHeadTagsProps,
 } from '@mui/material-nextjs/v14-pagesRouter';
-import theme, { roboto } from '../src/theme';
+import exampleTheme, { poppins } from '../theme/example';
 
 export default function MyDocument(
     props: DocumentProps & DocumentHeadTagsProps
 ) {
     return (
-        <Html lang="en" className={roboto.className}>
+        <Html lang="en" className={poppins.className}>
             <Head>
                 {/* PWA primary color */}
-                <meta name="theme-color" content={theme.palette.primary.main} />
+                <meta
+                    name="theme-color"
+                    content={exampleTheme.palette.primary.main}
+                />
                 <link rel="shortcut icon" href="/favicon.ico" />
                 <meta name="emotion-insertion-point" content="" />
                 <DocumentHeadTags {...props} />
