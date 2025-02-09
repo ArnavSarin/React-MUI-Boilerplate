@@ -5,7 +5,7 @@ import { AppCacheProvider } from '@mui/material-nextjs/v14-pagesRouter';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import './globals.scss';
-import customerTheme from '../theme/customer';
+import theme from '../theme/theme';
 
 export default function MyApp(props: AppProps) {
     const { Component, pageProps } = props;
@@ -17,7 +17,7 @@ export default function MyApp(props: AppProps) {
                     content="initial-scale=1, width=device-width"
                 />
             </Head>
-            <ThemeProvider theme={customerTheme}>
+            <ThemeProvider theme={theme}>
                 <CssBaseline />
                 <Component {...pageProps} />
             </ThemeProvider>

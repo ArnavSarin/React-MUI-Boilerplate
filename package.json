@@ -16,6 +16,7 @@
     "@mui/icons-material": "^6.4.3",
     "@mui/material": "^6.4.3",
     "@mui/material-nextjs": "latest",
+    "ag-grid-react": "^33.0.4",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",

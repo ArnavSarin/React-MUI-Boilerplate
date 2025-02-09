@@ -9,7 +9,7 @@ export const poppins = Poppins({
 });
 
 // Create a theme instance.
-const customerTheme = createTheme({
+const architectTheme = createTheme({
     palette: {
         primary: {
             main: '#556cd6',
@@ -43,11 +43,11 @@ const customerTheme = createTheme({
                 root: {
                     '&.Mui-selected': {
                         color: '#FFFFFF',
-                        backgroundColor: '#E2B281',
+                        backgroundColor: '#344FFF',
                         borderRadius: '8px',
                         '&:hover': {
                             color: '#FFFFFF',
-                            backgroundColor: '#E2B281',
+                            backgroundColor: '#344FFF',
                             borderRadius: '8px',
                         },
                     },
@@ -57,4 +57,4 @@ const customerTheme = createTheme({
     },
 });
 
-export default customerTheme;
+export default architectTheme;

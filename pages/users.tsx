@@ -6,7 +6,7 @@ import Box from '@mui/material/Box';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import { SideNavigationItem } from '../components /side-navigation/types';
 
-export default function Example() {
+export default function Users() {
     return (
         <SideNavigation
             open={true}

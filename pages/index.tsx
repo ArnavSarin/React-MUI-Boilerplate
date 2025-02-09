@@ -1,19 +1,34 @@
-import { Button } from '@mui/material';
+import { Button, Stack } from '@mui/material';
 import Link from '@mui/material/Link';
-import Box from '@mui/material/Box';
 import * as React from 'react';
 
 export default function Home() {
     return (
-        <Box sx={{ maxWidth: 'sm' }}>
+        <Stack direction="column" spacing={2}>
             <Button
                 variant="contained"
                 component={Link}
                 noLinkStyle
-                href="/example"
+                href="/architects"
             >
-                Go to the example page
+                Go to the Architects page
             </Button>
-        </Box>
+            <Button
+                variant="contained"
+                component={Link}
+                noLinkStyle
+                href="/customers"
+            >
+                Go to the Customers page
+            </Button>
+            <Button
+                variant="contained"
+                component={Link}
+                noLinkStyle
+                href="/users"
+            >
+                Go to the Users page
+            </Button>
+        </Stack>
     );
 }
