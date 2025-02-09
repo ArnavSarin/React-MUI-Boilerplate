@@ -2,15 +2,15 @@ import { createTheme } from '@mui/material/styles';
 import { deepmerge } from '@mui/utils';
 import { baseThemeOptions } from './baseTheme';
 
-const architectThemeOptions = {
+const userThemeOptions = {
     components: {
         MuiListItemButton: {
             styleOverrides: {
                 root: {
                     '&.Mui-selected': {
-                        backgroundColor: '#344FFF',
+                        backgroundColor: '#E2B281',
                         '&:hover': {
-                            backgroundColor: '#344FFF',
+                            backgroundColor: '#E2B281',
                         },
                     },
                 },
@@ -19,8 +19,5 @@ const architectThemeOptions = {
     },
 };
 
-const architectTheme = createTheme(
-    deepmerge(architectThemeOptions, baseThemeOptions)
-);
-
-export default architectTheme;
+const userTheme = createTheme(deepmerge(userThemeOptions, baseThemeOptions));
+export default userTheme;

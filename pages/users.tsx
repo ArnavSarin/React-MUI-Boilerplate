@@ -1,41 +1,52 @@
 import * as React from 'react';
 import SideNavigation from '../components /side-navigation/SideNavigation';
-import { Button } from '@mui/material';
+import { Button, Stack } from '@mui/material';
 import Link from '@mui/material/Link';
-import Box from '@mui/material/Box';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import { SideNavigationItem } from '../components /side-navigation/types';
+import userTheme from '../theme/user';
+import { ThemeProvider } from '@mui/material/styles';
 
 export default function Users() {
     return (
-        <SideNavigation
-            open={true}
-            navigationList={
-                [
-                    {
-                        name: 'Item 1',
-                        icon: () => <AccountBoxIcon />,
-                    },
-                    {
-                        name: 'Item 2',
-                        icon: () => <AccountBoxIcon />,
-                    },
-                ] as SideNavigationItem[]
-            }
-            sideNavChildren={
-                (
-                    <Box sx={{ maxWidth: 'sm' }}>
-                        <Button
-                            variant="contained"
-                            component={Link}
-                            noLinkStyle
-                            href="/"
+        <ThemeProvider theme={userTheme}>
+            <SideNavigation
+                open={true}
+                navigationList={
+                    [
+                        {
+                            name: 'Item 1',
+                            icon: () => <AccountBoxIcon />,
+                        },
+                        {
+                            name: 'Item 2',
+                            icon: () => <AccountBoxIcon />,
+                        },
+                    ] as SideNavigationItem[]
+                }
+                sideNavChildren={
+                    (
+                        <Stack
+                            direction="column"
+                            spacing={2}
+                            sx={{
+                                width: '100%',
+                                justifyContent: 'space-around',
+                                alignItems: 'center',
+                            }}
                         >
-                            Go to the home page
-                        </Button>
-                    </Box>
-                ) as React.ReactNode
-            }
-        ></SideNavigation>
+                            <Button
+                                variant="contained"
+                                component={Link}
+                                noLinkStyle
+                                href="/"
+                            >
+                                Go to the home page
+                            </Button>
+                        </Stack>
+                    ) as React.ReactNode
+                }
+            ></SideNavigation>
+        </ThemeProvider>
     );
 }

@@ -36,7 +36,7 @@ const SideNavigation = ({
             >
                 <Box>
                     {/*<IconButton onClick={handleDrawerClose}>*/}
-                    {/*    {theme.direction === 'rtl' ? (*/}
+                    {/*    {baseTheme.direction === 'rtl' ? (*/}
                     {/*        <ChevronLeftIcon />*/}
                     {/*    ) : (*/}
                     {/*        <ChevronRightIcon />*/}

@@ -2,9 +2,11 @@ import { Button, Stack } from '@mui/material';
 import Link from '@mui/material/Link';
 import * as React from 'react';
 
+//TODO: REFACTOR EACH PAGE TO USE ONE EXPERIENCE COMPONENT
+
 export default function Home() {
     return (
-        <Stack direction="column" spacing={2}>
+        <Stack direction="column" spacing={2} sx={{ padding: '2em' }}>
             <Button
                 variant="contained"
                 component={Link}
@@ -17,9 +19,9 @@ export default function Home() {
                 variant="contained"
                 component={Link}
                 noLinkStyle
-                href="/customers"
+                href="/enterprise"
             >
-                Go to the Customers page
+                Go to the Enterprise page
             </Button>
             <Button
                 variant="contained"

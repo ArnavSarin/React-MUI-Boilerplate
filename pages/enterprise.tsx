@@ -1,16 +1,16 @@
 import * as React from 'react';
 import SideNavigation from '../components /side-navigation/SideNavigation';
-import { Button } from '@mui/material';
+import { Button, Stack } from '@mui/material';
 import Link from '@mui/material/Link';
-import Box from '@mui/material/Box';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import { SideNavigationItem } from '../components /side-navigation/types';
-import customerTheme from '../theme/customer';
 import { ThemeProvider } from '@mui/material/styles';
+import enterpriseTheme from '../theme/enterprise';
+import EnterpriseGrid from '../src/enterprise-grid/EnterpriseGrid';
 
-export default function Customers() {
+export default function Enterprise() {
     return (
-        <ThemeProvider theme={customerTheme}>
+        <ThemeProvider theme={enterpriseTheme}>
             <SideNavigation
                 open={true}
                 navigationList={
@@ -27,7 +27,17 @@ export default function Customers() {
                 }
                 sideNavChildren={
                     (
-                        <Box sx={{ maxWidth: 'sm' }}>
+                        <Stack
+                            direction="column"
+                            spacing={2}
+                            sx={{
+                                width: '100%',
+                                height: '100%',
+                                padding: '2em',
+                                justifyContent: 'space-around',
+                                alignItems: 'center',
+                            }}
+                        >
                             <Button
                                 variant="contained"
                                 component={Link}
@@ -36,7 +46,8 @@ export default function Customers() {
                             >
                                 Go to the home page
                             </Button>
-                        </Box>
+                            <EnterpriseGrid />
+                        </Stack>
                     ) as React.ReactNode
                 }
             ></SideNavigation>

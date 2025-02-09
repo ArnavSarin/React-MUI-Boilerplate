@@ -1,14 +1,11 @@
 import * as React from 'react';
 import SideNavigation from '../components /side-navigation/SideNavigation';
-import { Button } from '@mui/material';
+import { Button, Stack } from '@mui/material';
 import Link from '@mui/material/Link';
-import Box from '@mui/material/Box';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import { SideNavigationItem } from '../components /side-navigation/types';
 import { ThemeProvider } from '@mui/material/styles';
 import architectTheme from '../theme/architect';
-
-//TODO: REFACTOR EACH PAGE TO USE ONE EXPERIENCE COMPONENT AND SAME WITH THEME
 
 export default function Architects() {
     return (
@@ -29,7 +26,15 @@ export default function Architects() {
                 }
                 sideNavChildren={
                     (
-                        <Box sx={{ maxWidth: 'sm' }}>
+                        <Stack
+                            direction="column"
+                            spacing={2}
+                            sx={{
+                                width: '100%',
+                                justifyContent: 'space-around',
+                                alignItems: 'center',
+                            }}
+                        >
                             <Button
                                 variant="contained"
                                 component={Link}
@@ -38,7 +43,7 @@ export default function Architects() {
                             >
                                 Go to the home page
                             </Button>
-                        </Box>
+                        </Stack>
                     ) as React.ReactNode
                 }
             ></SideNavigation>
