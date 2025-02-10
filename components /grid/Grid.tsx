@@ -1,10 +1,23 @@
 import { AgGridReact } from 'ag-grid-react';
-import { AllCommunityModule, ModuleRegistry } from 'ag-grid-community';
+import {
+    AllCommunityModule,
+    ModuleRegistry,
+    QuickFilterModule,
+    ValidationModule,
+    ClientSideRowModelModule,
+} from 'ag-grid-community';
 import Box from '@mui/material/Box';
 import { GridProps } from './types';
-import { useMemo } from 'react';
+import { useCallback, useMemo, useRef } from 'react';
+import { Stack, TextField } from '@mui/material';
 
-ModuleRegistry.registerModules([AllCommunityModule]);
+ModuleRegistry.registerModules([
+    /* Development Only */
+    AllCommunityModule,
+    QuickFilterModule,
+    ClientSideRowModelModule,
+    ValidationModule,
+]);
 
 const Grid = ({
     rowData,
@@ -17,15 +30,33 @@ const Grid = ({
     paginationPageSizeSelector,
     ...props
 }: GridProps) => {
+    const gridRef = useRef<AgGridReact>(null);
+
     const defaultRowSelection = useMemo(() => {
         return {
             mode: 'singleRow',
         };
     }, []);
 
+    const onSearchChange = useCallback(() => {
+        gridRef.current!.api.setGridOption(
+            'quickFilterText',
+            (document.getElementById('search') as HTMLInputElement).value
+        );
+    }, []);
+
     return (
-        <Box style={{ width: '100%', height: '100%' }}>
+        <Stack direction="column" style={{ width: '100%', height: '100%' }}>
+            <Stack>
+                <TextField
+                    id="search"
+                    label="Search"
+                    variant="outlined"
+                    onInput={onSearchChange}
+                />
+            </Stack>
             <AgGridReact
+                ref={gridRef}
                 rowData={rowData}
                 columnDefs={colDefs}
                 defaultColDef={defaultColDef ?? { minWidth: 100 }}
@@ -36,7 +67,7 @@ const Grid = ({
                 paginationPageSizeSelector={paginationPageSizeSelector ?? false}
                 {...props}
             />
-        </Box>
+        </Stack>
     );
 };
 

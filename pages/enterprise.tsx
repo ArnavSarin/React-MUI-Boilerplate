@@ -2,12 +2,13 @@ import * as React from 'react';
 import SideNavigation from '../components /side-navigation/SideNavigation';
 import { Button, Stack } from '@mui/material';
 import Link from '@mui/material/Link';
-import AccountBoxIcon from '@mui/icons-material/AccountBox';
-import { SideNavigationItem } from '../components /side-navigation/types';
 import { ThemeProvider } from '@mui/material/styles';
 import enterpriseTheme from '../theme/enterprise';
 import EnterpriseGrid from '../src/enterprise-grid/EnterpriseGrid';
 import EnterpriseInsightsCard from '../src/EnterpriseInsightsCard';
+import { ReactComponent as Dashboard } from '../public/Dashboard.svg';
+import { SideNavigationItem } from '../components /side-navigation/types';
+import BuildIcon from '@mui/icons-material/Build';
 
 export default function Enterprise() {
     return (
@@ -18,23 +19,28 @@ export default function Enterprise() {
                     [
                         {
                             name: 'Dashboard',
-                            icon: <AccountBoxIcon />,
+                            icon: <BuildIcon />,
+                            // icon: <SvgIcon><Dashboard/><SvgIcon/>,
                         },
                         {
                             name: 'Project',
-                            icon: <AccountBoxIcon />,
+                            // icon: <SvgIcon><Dashboard/><SvgIcon/>,
+                            icon: <BuildIcon />,
                         },
                         {
                             name: 'Funding',
-                            icon: <AccountBoxIcon />,
+                            // icon: <SvgIcon><Dashboard/><SvgIcon/>,
+                            icon: <BuildIcon />,
                         },
                         {
                             name: 'Account History',
-                            icon: <AccountBoxIcon />,
+                            // icon: <SvgIcon><Dashboard/><SvgIcon/>,
+                            icon: <BuildIcon />,
                         },
                         {
                             name: 'Help',
-                            icon: <AccountBoxIcon />,
+                            // icon: <SvgIcon><Dashboard/><SvgIcon/>,
+                            icon: <BuildIcon />,
                         },
                     ] as SideNavigationItem[]
                 }
