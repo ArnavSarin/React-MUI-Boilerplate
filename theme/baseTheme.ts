@@ -32,7 +32,7 @@ export const baseThemeOptions = {
                         visibility: 'unset !important',
                         transform: 'unset !important',
                         boxSizing: 'border-box',
-                        width: '15em',
+                        width: '18em',
                         height: '100%',
                     },
                 },
@@ -49,6 +49,13 @@ export const baseThemeOptions = {
                             borderRadius: '8px',
                         },
                     },
+                },
+            },
+        },
+        MuiAvatar: {
+            styleOverrides: {
+                root: {
+                    backgroundColor: '#D3FFE7',
                 },
             },
         },

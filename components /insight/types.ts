@@ -1,9 +1,9 @@
-import { ReactComponent } from 'ag-grid-react/dist/types/src/shared/reactComponent';
-import React from 'react';
+import { ReactElement } from 'react';
+import { IconProps, SvgIconProps } from '@mui/material';
 
 export interface InsightProps {
-    // icon:
-    helperText: string;
+    icon?: ReactElement<SvgIconProps> | ReactElement<IconProps>;
+    title: string;
     primaryText: string;
-    secondaryText: React.ComponentType<{}>;
+    secondaryText: ReactElement<{}>;
 }

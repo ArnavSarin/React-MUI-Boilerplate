@@ -16,11 +16,11 @@ export default function Users() {
                     [
                         {
                             name: 'Item 1',
-                            icon: () => <AccountBoxIcon />,
+                            icon: <AccountBoxIcon />,
                         },
                         {
                             name: 'Item 2',
-                            icon: () => <AccountBoxIcon />,
+                            icon: <AccountBoxIcon />,
                         },
                     ] as SideNavigationItem[]
                 }

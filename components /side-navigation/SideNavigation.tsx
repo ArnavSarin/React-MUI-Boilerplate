@@ -9,6 +9,7 @@ import { SideNavigationProps } from './types';
 import React, { ReactNode, useState } from 'react';
 import Box from '@mui/material/Box';
 import styles from './SideNavigation.module.scss';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
 const SideNavigation = ({
     navigationList,
@@ -55,12 +56,14 @@ const SideNavigation = ({
                                     selected={selectedIndex === index}
                                     onClick={() => handleListItemClick(index)}
                                 >
-                                    {item.icon &&
-                                        ((<item.icon />) as ReactNode)}
+                                    {/*{item.icon &&*/}
+                                    {/*    ((<item.icon />) as ReactNode)}*/}
+                                    {item.icon && item.icon}
                                     <ListItemText
                                         className={styles.itemText}
                                         primary={item.name}
                                     />
+                                    <ChevronRightIcon />
                                 </ListItemButton>
                             </ListItem>
                         )) as ReactNode[]

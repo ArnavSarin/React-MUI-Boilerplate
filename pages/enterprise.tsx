@@ -7,6 +7,7 @@ import { SideNavigationItem } from '../components /side-navigation/types';
 import { ThemeProvider } from '@mui/material/styles';
 import enterpriseTheme from '../theme/enterprise';
 import EnterpriseGrid from '../src/enterprise-grid/EnterpriseGrid';
+import EnterpriseInsightsCard from '../src/EnterpriseInsightsCard';
 
 export default function Enterprise() {
     return (
@@ -16,12 +17,24 @@ export default function Enterprise() {
                 navigationList={
                     [
                         {
-                            name: 'Item 1',
-                            icon: () => <AccountBoxIcon />,
+                            name: 'Dashboard',
+                            icon: <AccountBoxIcon />,
                         },
                         {
-                            name: 'Item 2',
-                            icon: () => <AccountBoxIcon />,
+                            name: 'Project',
+                            icon: <AccountBoxIcon />,
+                        },
+                        {
+                            name: 'Funding',
+                            icon: <AccountBoxIcon />,
+                        },
+                        {
+                            name: 'Account History',
+                            icon: <AccountBoxIcon />,
+                        },
+                        {
+                            name: 'Help',
+                            icon: <AccountBoxIcon />,
                         },
                     ] as SideNavigationItem[]
                 }
@@ -46,6 +59,7 @@ export default function Enterprise() {
                             >
                                 Go to the home page
                             </Button>
+                            <EnterpriseInsightsCard />
                             <EnterpriseGrid />
                         </Stack>
                     ) as React.ReactNode

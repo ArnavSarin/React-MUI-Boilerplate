@@ -6,7 +6,7 @@
 
   .sideNavDrawer {
     flex-shrink: 0;
-    width: 15em;
+    width: 18em;
 
     .sideNavList {
       width: 100%;
@@ -20,7 +20,8 @@
 
         .itemText {
           display: flex;
-          justify-content: center;
+          padding-left: 1em;
+          padding-right: 1em;
         }
       }
     }

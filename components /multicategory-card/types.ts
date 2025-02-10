@@ -1,6 +1,6 @@
-import { CardProps } from '@mui/material';
-import React from 'react';
+import { CardProps, StackProps } from '@mui/material';
+import { ReactElement } from 'react';
 
-export interface MultiCategoryCardProps extends CardProps {
-    categoryList: React.ComponentType<{}>[];
+export interface MultiCategoryCardProps extends CardProps, StackProps {
+    categoryList: ReactElement<{}>[];
 }
