@@ -31,8 +31,11 @@ export default function Users() {
                             spacing={2}
                             sx={{
                                 width: '100%',
+                                height: '100%',
+                                padding: '2em',
                                 justifyContent: 'space-around',
                                 alignItems: 'center',
+                                backgroundColor: '#F9FBFF',
                             }}
                         >
                             <Button

@@ -55,6 +55,7 @@ export default function Enterprise() {
                                 padding: '2em',
                                 justifyContent: 'space-around',
                                 alignItems: 'center',
+                                backgroundColor: '#F9FBFF',
                             }}
                         >
                             <Button
