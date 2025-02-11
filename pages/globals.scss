@@ -1,14 +1,12 @@
+@use "../mixins/util.module" as util;
+
 html, body {
-  height: 100%;
-  width: 100%;
+  @include util.flex-col;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
 }
 
 #__next {
+  @include util.flex-col;
   flex: 1;
-  display: flex;
-  flex-direction: column;
 }

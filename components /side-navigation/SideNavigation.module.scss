@@ -1,21 +1,19 @@
+@use "../../mixins/util.module" as util;
 
 .sideNavBox {
-  display: flex;
-  height: 100%;
-  width: 100%;
+  @include util.flex-row;
 
   .sideNavDrawer {
     flex-shrink: 0;
     width: 18em;
 
     .sideNavList {
-      width: 100%;
-      height: 100%;
+      @include util.dimension-fill;
 
       .sideNavItem {
         color: #9197B3;
         width: auto;
-        margin: 1em;
+        margin: 0.5em;
         padding: unset;
 
         .itemText {

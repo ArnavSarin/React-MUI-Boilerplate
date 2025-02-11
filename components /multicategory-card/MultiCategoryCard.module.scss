@@ -1,0 +1,10 @@
+@use "../../mixins/util.module" as util;
+
+.cardContent {
+  @include util.dimension-fill;
+  .contentContainer {
+    @include util.dimension-fill;
+    justify-content: space-around;;
+    align-items: center;
+  }
+}

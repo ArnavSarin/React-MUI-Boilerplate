@@ -6,6 +6,7 @@ import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import { SideNavigationItem } from '../components /side-navigation/types';
 import { ThemeProvider } from '@mui/material/styles';
 import architectTheme from '../theme/architect';
+import styles from './Main.module.scss';
 
 export default function Architects() {
     return (
@@ -29,14 +30,7 @@ export default function Architects() {
                         <Stack
                             direction="column"
                             spacing={2}
-                            sx={{
-                                width: '100%',
-                                height: '100%',
-                                padding: '2em',
-                                justifyContent: 'space-around',
-                                alignItems: 'center',
-                                backgroundColor: '#F9FBFF',
-                            }}
+                            className={styles.mainContainer}
                         >
                             <Button
                                 variant="contained"

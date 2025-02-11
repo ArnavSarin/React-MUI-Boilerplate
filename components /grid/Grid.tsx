@@ -6,10 +6,10 @@ import {
     ValidationModule,
     ClientSideRowModelModule,
 } from 'ag-grid-community';
-import Box from '@mui/material/Box';
 import { GridProps } from './types';
 import { useCallback, useMemo, useRef } from 'react';
 import { Stack, TextField } from '@mui/material';
+import styles from './Grid.module.scss';
 
 ModuleRegistry.registerModules([
     /* Development Only */
@@ -46,7 +46,7 @@ const Grid = ({
     }, []);
 
     return (
-        <Stack direction="column" style={{ width: '100%', height: '100%' }}>
+        <Stack direction="column" className={styles.gridContainer}>
             <Stack>
                 <TextField
                     id="search"

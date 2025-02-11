@@ -1,0 +1,5 @@
+@use "../../mixins/util.module" as util;
+
+.gridContainer {
+  @include util.flex-col;
+}

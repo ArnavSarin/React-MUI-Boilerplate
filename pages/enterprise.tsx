@@ -9,6 +9,7 @@ import EnterpriseInsightsCard from '../src/EnterpriseInsightsCard';
 import { ReactComponent as Dashboard } from '../public/Dashboard.svg';
 import { SideNavigationItem } from '../components /side-navigation/types';
 import BuildIcon from '@mui/icons-material/Build';
+import styles from './Main.module.scss';
 
 export default function Enterprise() {
     return (
@@ -49,14 +50,7 @@ export default function Enterprise() {
                         <Stack
                             direction="column"
                             spacing={2}
-                            sx={{
-                                width: '100%',
-                                height: '100%',
-                                padding: '2em',
-                                justifyContent: 'space-around',
-                                alignItems: 'center',
-                                backgroundColor: '#F9FBFF',
-                            }}
+                            className={styles.mainContainer}
                         >
                             <Button
                                 variant="contained"

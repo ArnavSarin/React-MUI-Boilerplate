@@ -4,6 +4,8 @@ import { MultiCategoryCardProps } from './types';
 import Divider from '@mui/material/Divider';
 import { ReactNode } from 'react';
 import { Stack } from '@mui/material';
+import styles from './MultiCategoryCard.module.scss';
+
 const MultiCategoryCard = ({
     direction,
     spacing,
@@ -12,16 +14,11 @@ const MultiCategoryCard = ({
 }: MultiCategoryCardProps) => {
     return (
         <Card {...props}>
-            <CardContent sx={{ width: '100%', height: '100%' }}>
+            <CardContent className={styles.cardContent}>
                 <Stack
                     direction={direction ?? 'row'}
                     spacing={spacing ?? 2}
-                    sx={{
-                        width: '100%',
-                        height: '100%',
-                        justifyContent: 'space-around',
-                        alignItems: 'center',
-                    }}
+                    styles={styles.contentContainer}
                 >
                     {categoryList.map(
                         (item, index) =>

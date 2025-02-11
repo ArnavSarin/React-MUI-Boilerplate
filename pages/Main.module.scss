@@ -1,0 +1,9 @@
+@use "../mixins/util.module" as util;
+
+.mainContainer {
+  @include util.dimension-fill;
+  padding: 2em;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #F9FBFF;
+}

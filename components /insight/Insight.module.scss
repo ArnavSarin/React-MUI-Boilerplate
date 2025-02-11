@@ -1,7 +1,19 @@
-.insightTitle {
+@use "../../mixins/util.module" as util;
 
-}
+.insightContainer {
+  @include util.flex-row;
+  @include util.flex-center;
 
-.insightPrimary {
+  .insightAvatar {
+    width: 3em;
+    height: 3em;
+  }
 
+  .insightTitle {
+
+  }
+
+  .insightPrimary {
+
+  }
 }
