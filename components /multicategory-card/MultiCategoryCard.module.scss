@@ -4,7 +4,7 @@
   @include util.dimension-fill;
   .contentContainer {
     @include util.dimension-fill;
-    justify-content: space-around;;
     align-items: center;
+    justify-content: space-around;
   }
 }
