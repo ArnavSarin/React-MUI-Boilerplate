@@ -6,10 +6,16 @@ import { ThemeProvider } from '@mui/material/styles';
 import enterpriseTheme from '../theme/enterprise';
 import EnterpriseGrid from '../src/enterprise-grid/EnterpriseGrid';
 import EnterpriseInsightsCard from '../src/EnterpriseInsightsCard';
-import { ReactComponent as Dashboard } from '../public/Dashboard.svg';
+import { ReactComponent as Dashboard } from '../assets/svg/Dashboard.svg';
 import { SideNavigationItem } from '../components /side-navigation/types';
-import BuildIcon from '@mui/icons-material/Build';
 import styles from './Main.module.scss';
+import {
+    AccountHistoryIcon,
+    DashboardIcon,
+    FundingIcon,
+    HelpIcon,
+    ProjectsIcon,
+} from '../assets/Icons';
 
 export default function Enterprise() {
     return (
@@ -20,28 +26,23 @@ export default function Enterprise() {
                     [
                         {
                             name: 'Dashboard',
-                            icon: <BuildIcon />,
-                            // icon: <SvgIcon><Dashboard/><SvgIcon/>,
+                            icon: <DashboardIcon />,
                         },
                         {
-                            name: 'Project',
-                            // icon: <SvgIcon><Dashboard/><SvgIcon/>,
-                            icon: <BuildIcon />,
+                            name: 'Projects',
+                            icon: <ProjectsIcon />,
                         },
                         {
                             name: 'Funding',
-                            // icon: <SvgIcon><Dashboard/><SvgIcon/>,
-                            icon: <BuildIcon />,
+                            icon: <FundingIcon />,
                         },
                         {
                             name: 'Account History',
-                            // icon: <SvgIcon><Dashboard/><SvgIcon/>,
-                            icon: <BuildIcon />,
+                            icon: <AccountHistoryIcon />,
                         },
                         {
                             name: 'Help',
-                            // icon: <SvgIcon><Dashboard/><SvgIcon/>,
-                            icon: <BuildIcon />,
+                            icon: <HelpIcon />,
                         },
                     ] as SideNavigationItem[]
                 }
