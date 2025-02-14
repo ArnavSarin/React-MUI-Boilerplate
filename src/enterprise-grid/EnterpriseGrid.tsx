@@ -8,10 +8,10 @@ const EnterpriseGrid = () => {
 
     const [columnDefs, setColDefs] = useState([
         { field: 'Project Name' },
+        { field: 'Architect' },
         { field: 'State' },
         { field: 'Country' },
         { field: 'Started' },
-        { field: 'Architect' },
         { field: 'Status', cellRenderer: StatusRenderer },
     ]);
 
