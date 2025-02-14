@@ -1,3 +1,5 @@
 import { TextFieldProps as MuiTextFieldProps } from '@mui/material';
 
-export interface TextFieldProps extends MuiTextFieldProps {}
+export interface TextFieldProps extends MuiTextFieldProps {
+    name: string;
+}

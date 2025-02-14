@@ -8,8 +8,10 @@ import {
 } from 'ag-grid-community';
 import { GridProps } from './types';
 import { useCallback, useMemo, useRef } from 'react';
-import { Stack, TextField } from '@mui/material';
+import { Stack } from '@mui/material';
 import styles from './Grid.module.scss';
+import TextField from '../form/text-field/TextField';
+import Box from '@mui/material/Box';
 
 ModuleRegistry.registerModules([
     /* Development Only */
@@ -28,6 +30,7 @@ const Grid = ({
     rowSelection,
     domLayout,
     paginationPageSizeSelector,
+    gridOptions,
     ...props
 }: GridProps) => {
     const gridRef = useRef<AgGridReact>(null);
@@ -48,15 +51,20 @@ const Grid = ({
     return (
         <Stack direction="column" className={styles.gridContainer}>
             <Stack>
-                <TextField
-                    id="search"
-                    label="Search"
-                    variant="outlined"
-                    onInput={onSearchChange}
-                />
+                <Box className={styles.searchContainer}>
+                    <TextField
+                        className={styles.search}
+                        name="Search"
+                        id="Search"
+                        label="Search"
+                        onInput={onSearchChange}
+                        fullWidth={false}
+                    />
+                </Box>
             </Stack>
             <AgGridReact
                 ref={gridRef}
+                // className={styles.grid}
                 rowData={rowData}
                 columnDefs={colDefs}
                 defaultColDef={defaultColDef ?? { minWidth: 100 }}
