@@ -1,6 +1,7 @@
 import Grid from '../../components /grid/Grid';
 import { useState } from 'react';
 import { enterpriseGridData } from './data';
+import StatusRenderer from './status-renderer/StatusRenderer';
 
 const EnterpriseGrid = () => {
     const { rowData, setRowData } = enterpriseGridData();
@@ -11,7 +12,7 @@ const EnterpriseGrid = () => {
         { field: 'Country' },
         { field: 'Started' },
         { field: 'Architect' },
-        { field: 'Status' },
+        { field: 'Status', cellRenderer: StatusRenderer },
     ]);
 
     return (

@@ -8,7 +8,7 @@ export const enterpriseGridData = () => {
             Country: 'United States',
             Started: '10/22/2023',
             Architect: 'Person A',
-            Status: 'Active',
+            Status: 'Open for Bids',
         },
         {
             'Project Name': 'Project 2',
@@ -40,7 +40,7 @@ export const enterpriseGridData = () => {
             Country: 'Indonesia',
             Started: '10/22/2023',
             Architect: 'Person E',
-            Status: 'Complete',
+            Status: 'Open for Bids',
         },
         {
             'Project Name': 'Project 6',
@@ -96,7 +96,7 @@ export const enterpriseGridData = () => {
             Country: 'South Africa',
             Started: '06/18/2022',
             Architect: 'Person L',
-            Status: 'Active',
+            Status: 'Open for Bids',
         },
         {
             'Project Name': 'Project 13',

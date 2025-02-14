@@ -8,7 +8,6 @@ export const poppins = Poppins({
     display: 'swap',
 });
 
-// Create a baseTheme instance.
 export const baseThemeOptions = {
     palette: {
         primary: {
@@ -24,9 +23,12 @@ export const baseThemeOptions = {
     typography: {
         fontFamily: poppins.style.fontFamily,
         h1: {
-            textColor: '#000000',
             fontSize: '22px',
             fontWeight: '500',
+        },
+        h3: {
+            fontSize: '14px',
+            fontWeight: '400',
         },
     },
     components: {
