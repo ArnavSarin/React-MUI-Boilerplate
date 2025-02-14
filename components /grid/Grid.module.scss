@@ -5,13 +5,14 @@
 .gridContainer {
   @include util.flex-col;
   @include util.border-base;
+  background-color: #FFFFFF;
+  //justify-content: space-evenly;
   padding: 2em;
-  justify-content: space-evenly;
 
   .searchContainer {
     @include util.flex-row;
     @include util.dimension-fill;
-    justify-content: flex-end;
+    justify-content: space-between;
     .search {
 
     }

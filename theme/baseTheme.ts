@@ -23,6 +23,11 @@ export const baseThemeOptions = {
     },
     typography: {
         fontFamily: poppins.style.fontFamily,
+        h1: {
+            textColor: '#000000',
+            fontSize: '22px',
+            fontWeight: '500',
+        },
     },
     components: {
         MuiDrawer: {

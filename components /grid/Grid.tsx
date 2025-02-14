@@ -9,7 +9,7 @@ import {
 } from 'ag-grid-community';
 import { GridProps } from './types';
 import { useCallback, useMemo, useRef } from 'react';
-import { Stack } from '@mui/material';
+import { Stack, Typography } from '@mui/material';
 import styles from './Grid.module.scss';
 import TextField from '../form/text-field/TextField';
 import Box from '@mui/material/Box';
@@ -24,6 +24,7 @@ ModuleRegistry.registerModules([
 ]);
 
 const Grid = ({
+    title,
     ref,
     rowData,
     columnDefs,
@@ -83,6 +84,7 @@ const Grid = ({
         <Stack direction="column" className={styles.gridContainer}>
             <Stack>
                 <Box className={styles.searchContainer}>
+                    <Typography variant={'h1'}>{title}</Typography>
                     <TextField
                         className={styles.search}
                         name="Search"

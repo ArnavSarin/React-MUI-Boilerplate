@@ -14,7 +14,9 @@ const EnterpriseGrid = () => {
         { field: 'Status' },
     ]);
 
-    return <Grid rowData={rowData} columnDefs={columnDefs} />;
+    return (
+        <Grid title={'Projects'} rowData={rowData} columnDefs={columnDefs} />
+    );
 };
 
 export default EnterpriseGrid;
