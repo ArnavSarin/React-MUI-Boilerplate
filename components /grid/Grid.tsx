@@ -1,5 +1,6 @@
 import { AgGridReact } from 'ag-grid-react';
 import {
+    themeQuartz,
     AllCommunityModule,
     ModuleRegistry,
     QuickFilterModule,
@@ -12,6 +13,7 @@ import { Stack } from '@mui/material';
 import styles from './Grid.module.scss';
 import TextField from '../form/text-field/TextField';
 import Box from '@mui/material/Box';
+import { mergeRefs } from 'react-merge-refs';
 
 ModuleRegistry.registerModules([
     /* Development Only */
@@ -22,31 +24,60 @@ ModuleRegistry.registerModules([
 ]);
 
 const Grid = ({
+    ref,
     rowData,
-    colDefs,
+    columnDefs,
     defaultColDef,
     pagination,
     paginationPageSize,
-    rowSelection,
-    domLayout,
     paginationPageSizeSelector,
-    gridOptions,
+    rowSelection,
+    onFirstDataRendered,
     ...props
 }: GridProps) => {
-    const gridRef = useRef<AgGridReact>(null);
-
-    const defaultRowSelection = useMemo(() => {
-        return {
-            mode: 'singleRow',
-        };
-    }, []);
-
     const onSearchChange = useCallback(() => {
         gridRef.current!.api.setGridOption(
             'quickFilterText',
             (document.getElementById('search') as HTMLInputElement).value
         );
     }, []);
+
+    const gridRef = useRef<AgGridReact>(null);
+
+    const defaultRowSelection = useMemo(() => {
+        return {
+            mode: 'singleRow',
+            checkboxes: false,
+            enableClickSelection: true,
+        };
+    }, []);
+
+    const defaultOnFirstDataRendered = useCallback(
+        (params: FirstDataRenderedEvent) => {
+            params.api.sizeColumnsToFit();
+        },
+        []
+    );
+
+    const myTheme = themeQuartz.withParams({
+        accentColor: '#008CFF',
+        backgroundColor: '#FFFFFF',
+        borderColor: '#00000000',
+        browserColorScheme: 'dark',
+        cellTextColor: '#292D32',
+        chromeBackgroundColor: '#FFFFFF',
+        columnBorder: true,
+        fontFamily: 'inherit',
+        foregroundColor: '#000000',
+        headerFontFamily: 'inherit',
+        headerFontSize: 14,
+        headerRowBorder: true,
+        headerTextColor: '#B5B7C0',
+        oddRowBackgroundColor: '#FFFFFF',
+        rowBorder: true,
+        spacing: 8,
+        wrapperBorder: true,
+    });
 
     return (
         <Stack direction="column" className={styles.gridContainer}>
@@ -63,16 +94,21 @@ const Grid = ({
                 </Box>
             </Stack>
             <AgGridReact
-                ref={gridRef}
-                // className={styles.grid}
+                ref={ref ? mergeRefs([gridRef, ref]) : gridRef}
+                theme={myTheme}
                 rowData={rowData}
-                columnDefs={colDefs}
+                columnDefs={columnDefs}
                 defaultColDef={defaultColDef ?? { minWidth: 100 }}
                 pagination={pagination ?? true}
                 paginationPageSize={paginationPageSize ?? 10}
-                rowSelection={rowSelection ?? defaultRowSelection}
-                domLayout={domLayout ?? 'autoHeight'}
                 paginationPageSizeSelector={paginationPageSizeSelector ?? false}
+                rowSelection={rowSelection ?? defaultRowSelection}
+                onFirstDataRendered={(event) => {
+                    if (onFirstDataRendered) {
+                        onFirstDataRendered(event);
+                    }
+                    return defaultOnFirstDataRendered(event);
+                }}
                 {...props}
             />
         </Stack>

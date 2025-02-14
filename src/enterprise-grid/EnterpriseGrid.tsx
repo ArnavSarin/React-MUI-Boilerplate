@@ -5,7 +5,7 @@ import { enterpriseGridData } from './data';
 const EnterpriseGrid = () => {
     const { rowData, setRowData } = enterpriseGridData();
 
-    const [colDefs, setColDefs] = useState([
+    const [columnDefs, setColDefs] = useState([
         { field: 'Project Name' },
         { field: 'State' },
         { field: 'Country' },
@@ -14,7 +14,7 @@ const EnterpriseGrid = () => {
         { field: 'Status' },
     ]);
 
-    return <Grid rowData={rowData} columnDefs={colDefs} />;
+    return <Grid rowData={rowData} columnDefs={columnDefs} />;
 };
 
 export default EnterpriseGrid;
