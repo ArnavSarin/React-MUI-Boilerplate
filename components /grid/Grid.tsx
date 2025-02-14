@@ -36,14 +36,14 @@ const Grid = ({
     onFirstDataRendered,
     ...props
 }: GridProps) => {
+    const gridRef = useRef<AgGridReact>(null);
+
     const onSearchChange = useCallback(() => {
         gridRef.current!.api.setGridOption(
             'quickFilterText',
             (document.getElementById('search') as HTMLInputElement).value
         );
     }, []);
-
-    const gridRef = useRef<AgGridReact>(null);
 
     const defaultRowSelection = useMemo(() => {
         return {
