@@ -8,7 +8,7 @@ import {
     ClientSideRowModelModule,
 } from 'ag-grid-community';
 import { GridProps } from './types';
-import { useCallback, useMemo, useRef } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Box, InputAdornment, Stack, Typography } from '@mui/material';
 import styles from './Grid.module.scss';
 import TextField from '../form/text-field/TextField';
@@ -43,7 +43,7 @@ const Grid = ({
     const onSearchChange = useCallback(() => {
         gridRef.current!.api.setGridOption(
             'quickFilterText',
-            (document.getElementById('search') as HTMLInputElement).value
+            (document.getElementById('Search') as HTMLInputElement).value
         );
     }, []);
 
@@ -72,7 +72,7 @@ const Grid = ({
                         name="Search"
                         id="Search"
                         label="Search"
-                        onInput={onSearchChange}
+                        onChange={onSearchChange}
                         fullWidth={false}
                         slotProps={{
                             input: {
@@ -111,7 +111,6 @@ const Grid = ({
                     }
                     return defaultOnFirstDataRendered(event);
                 }}
-                quickFilter={(quickFilter) => quickFilter.split(',')}
                 {...props}
             />
         </Stack>

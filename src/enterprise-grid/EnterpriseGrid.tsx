@@ -13,21 +13,16 @@ const EnterpriseGrid = () => {
         {
             field: 'Architect',
             cellRenderer: ArchitectRenderer,
-            // getQuickFilterText: (params) => {
-            //     return params.value;
-            // },
-            // valueGetter: (p) => p.value,
         },
         { field: 'State' },
         { field: 'Country' },
-        { field: 'Started', cellDataType: 'date' },
+        {
+            field: 'Started',
+            cellDataType: 'date',
+        },
         {
             field: 'Status',
             cellRenderer: StatusRenderer,
-            // getQuickFilterText: (params) => {
-            //     return params.value;
-            // },
-            // valueGetter: (p) => p.value,
         },
     ]);
 
