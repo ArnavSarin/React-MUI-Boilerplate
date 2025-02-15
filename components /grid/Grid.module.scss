@@ -1,41 +1,19 @@
-@use "ag-grid-community/styles" as ag;
 @use "../../mixins/util.module" as util;
-
 
 .gridContainer {
   @include util.flex-col;
   @include util.border-base;
   background-color: #FFFFFF;
-  //justify-content: space-evenly;
   padding: 2em;
 
   .searchContainer {
     @include util.flex-row;
     @include util.dimension-fill;
     justify-content: space-between;
+    padding-left: 1em;
+    padding-right: 1em;
     .search {
 
     }
   }
 }
-
-//@include ag.grid-styles((
-//        theme: quartz
-//));
-
-//.ag-theme-quartz {
-//  accent-color: #008CFF;
-//  background-color: #FFFFFF;
-//  border-color: #00000000;
-//  cellTextColor: #292D32;
-//  columnBorder: true;
-//  font-family: inherit;
-//  foregroundColor: #000000;
-//  headerFontFamily: inherit;
-//  headerFontSize: 14px;
-//  headerRowBorder: true;
-//  headerTextColor: #B5B7C0;
-//  rowBorder: true;
-//  spacing: 8px;
-//  wrapperBorder: true;
-//}

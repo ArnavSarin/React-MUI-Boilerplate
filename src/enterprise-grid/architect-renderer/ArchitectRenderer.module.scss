@@ -1,0 +1,28 @@
+@use "../../../mixins/util.module" as util;
+
+.architectContainer {
+  @include util.flex-row;
+  align-items: center;
+  height: 80%;
+  width: 60%;
+  background-color: #F9FBFF;
+  border-radius: 4px;
+
+  .textContainer{
+    @include util.flex-col;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%;
+    padding-left: 1em;
+    .primaryText {
+      color: #000000;
+    }
+    .secondaryText {
+      color: #9197B3;
+    }
+  }
+
+  .chevron {
+    color: #000000;
+  }
+}

@@ -30,6 +30,10 @@ export const baseThemeOptions = {
             fontSize: '14px',
             fontWeight: '400',
         },
+        h4: {
+            fontSize: '12px',
+            fontWeight: '300',
+        },
     },
     components: {
         MuiDrawer: {

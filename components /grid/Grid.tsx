@@ -9,11 +9,11 @@ import {
 } from 'ag-grid-community';
 import { GridProps } from './types';
 import { useCallback, useMemo, useRef } from 'react';
-import { Stack, Typography } from '@mui/material';
+import { Box, InputAdornment, Stack, Typography } from '@mui/material';
 import styles from './Grid.module.scss';
 import TextField from '../form/text-field/TextField';
-import Box from '@mui/material/Box';
 import { mergeRefs } from 'react-merge-refs';
+import SearchIcon from '@mui/icons-material/Search';
 
 ModuleRegistry.registerModules([
     /* Development Only */
@@ -26,6 +26,8 @@ ModuleRegistry.registerModules([
 const Grid = ({
     title,
     ref,
+    className,
+    theme,
     rowData,
     columnDefs,
     defaultColDef,
@@ -60,26 +62,6 @@ const Grid = ({
         []
     );
 
-    const myTheme = themeQuartz.withParams({
-        accentColor: '#008CFF',
-        backgroundColor: '#FFFFFF',
-        borderColor: '#00000000',
-        browserColorScheme: 'dark',
-        cellTextColor: '#292D32',
-        chromeBackgroundColor: '#FFFFFF',
-        columnBorder: true,
-        fontFamily: 'inherit',
-        foregroundColor: '#000000',
-        headerFontFamily: 'inherit',
-        headerFontSize: 14,
-        headerRowBorder: true,
-        headerTextColor: '#B5B7C0',
-        oddRowBackgroundColor: '#FFFFFF',
-        rowBorder: true,
-        spacing: 8,
-        wrapperBorder: true,
-    });
-
     return (
         <Stack direction="column" className={styles.gridContainer}>
             <Stack>
@@ -92,15 +74,33 @@ const Grid = ({
                         label="Search"
                         onInput={onSearchChange}
                         fullWidth={false}
+                        slotProps={{
+                            input: {
+                                startAdornment: (
+                                    <InputAdornment position="start">
+                                        <SearchIcon />
+                                    </InputAdornment>
+                                ),
+                            },
+                        }}
                     />
                 </Box>
             </Stack>
             <AgGridReact
                 ref={ref ? mergeRefs([gridRef, ref]) : gridRef}
-                theme={myTheme}
+                className={className}
+                theme={theme ?? themeQuartz}
                 rowData={rowData}
                 columnDefs={columnDefs}
-                defaultColDef={defaultColDef ?? { minWidth: 100 }}
+                defaultColDef={
+                    defaultColDef ?? {
+                        minWidth: 200,
+                        cellStyle: (params) => ({
+                            display: 'flex',
+                            alignItems: 'center',
+                        }),
+                    }
+                }
                 pagination={pagination ?? true}
                 paginationPageSize={paginationPageSize ?? 10}
                 paginationPageSizeSelector={paginationPageSizeSelector ?? false}
@@ -111,6 +111,7 @@ const Grid = ({
                     }
                     return defaultOnFirstDataRendered(event);
                 }}
+                quickFilter={(quickFilter) => quickFilter.split(',')}
                 {...props}
             />
         </Stack>

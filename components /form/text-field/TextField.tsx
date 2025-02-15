@@ -6,6 +6,7 @@ import { mergeRefs } from 'react-merge-refs';
 const TextField = ({
     name,
     variant,
+    size,
     helperText,
     fullWidth,
     ref, //CONTROLLER PROPS BELOW
@@ -28,6 +29,7 @@ const TextField = ({
         <MuiTextField
             name={name}
             variant={variant ?? 'outlined'}
+            size={size ?? 'small'}
             fullWidth={fullWidth ?? true}
             error={!!errors.name}
             helperText={errors.name ? errors.name.message : ''}
