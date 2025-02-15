@@ -3,11 +3,12 @@ import { ReactElement, ReactNode } from 'react';
 
 export interface SideNavigationItem {
     name: string;
-    // icon?: ComponentType<{}>;
     icon?: ReactElement<{}>;
+    // icon?: ComponentType<{}>;
 }
 
 export interface SideNavigationProps extends DrawerProps {
     navigationList: SideNavigationItem[];
     sideNavChildren: ReactNode;
+    logoBox?: ReactElement<{}>;
 }

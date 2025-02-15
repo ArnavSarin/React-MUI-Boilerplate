@@ -23,14 +23,22 @@ export const baseThemeOptions = {
     typography: {
         fontFamily: poppins.style.fontFamily,
         h1: {
+            fontSize: '28px',
+            fontWeight: '500',
+        },
+        h2: {
             fontSize: '22px',
             fontWeight: '500',
         },
         h3: {
+            fontSize: '18px',
+            fontWeight: '500',
+        },
+        h4: {
             fontSize: '14px',
             fontWeight: '400',
         },
-        h4: {
+        h5: {
             fontSize: '12px',
             fontWeight: '300',
         },
@@ -67,6 +75,13 @@ export const baseThemeOptions = {
             styleOverrides: {
                 root: {
                     backgroundColor: '#D3FFE7',
+                },
+            },
+        },
+        MuiDivider: {
+            styleOverrides: {
+                root: {
+                    border: '1px solid #F0F0F0',
                 },
             },
         },

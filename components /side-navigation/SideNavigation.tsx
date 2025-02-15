@@ -12,6 +12,7 @@ import styles from './SideNavigation.module.scss';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
 const SideNavigation = ({
+    logoBox,
     navigationList,
     id,
     variant,
@@ -35,15 +36,7 @@ const SideNavigation = ({
                 anchor={anchor ?? 'left'}
                 {...props}
             >
-                <Box>
-                    {/*<IconButton onClick={handleDrawerClose}>*/}
-                    {/*    {baseTheme.direction === 'rtl' ? (*/}
-                    {/*        <ChevronLeftIcon />*/}
-                    {/*    ) : (*/}
-                    {/*        <ChevronRightIcon />*/}
-                    {/*    )}*/}
-                    {/*</IconButton>*/}
-                </Box>
+                {logoBox}
                 <List className={styles.sideNavList} id={'sideNavList'}>
                     {
                         navigationList.map((item, index) => (

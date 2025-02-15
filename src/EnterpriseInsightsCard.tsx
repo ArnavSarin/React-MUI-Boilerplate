@@ -7,10 +7,16 @@ import MultiCategoryCard from '../components /multicategory-card/MultiCategoryCa
 const Funds = () => {
     return (
         <Insight
-            icon={<BuildIcon fontSize={'large'} sx={{ color: '#00AC4F' }} />}
+            icon={
+                <BuildIcon
+                    sx={{ color: '#00AC4F', height: '1.5em', width: '1.5em' }}
+                />
+            }
             title={'Funds'}
             primaryText={'Temporary Text'}
-            secondaryText={<Typography>{'16% this month'}</Typography>}
+            secondaryText={
+                <Typography variant={'h5'}>{'16% this month'}</Typography>
+            }
         />
     ) as ReactNode;
 };
@@ -18,10 +24,16 @@ const Funds = () => {
 const ProjectsComplete = () => {
     return (
         <Insight
-            icon={<BuildIcon fontSize={'large'} sx={{ color: '#00AC4F' }} />}
+            icon={
+                <BuildIcon
+                    sx={{ color: '#00AC4F', height: '1.5em', width: '1.5em' }}
+                />
+            }
             title={'Projects Complete'}
             primaryText={'Temporary Text'}
-            secondaryText={<Typography>{'1 this month'}</Typography>}
+            secondaryText={
+                <Typography variant={'h5'}>{'1 this month'}</Typography>
+            }
         />
     ) as ReactNode;
 };
@@ -29,10 +41,16 @@ const ProjectsComplete = () => {
 const ActiveProjects = () => {
     return (
         <Insight
-            icon={<BuildIcon fontSize={'large'} sx={{ color: '#00AC4F' }} />}
+            icon={
+                <BuildIcon
+                    sx={{ color: '#00AC4F', height: '1.5em', width: '1.5em' }}
+                />
+            }
             title={'Active Projects'}
             primaryText={'Temporary Text'}
-            secondaryText={<Typography>{'2 this month'}</Typography>}
+            secondaryText={
+                <Typography variant={'h5'}>{'2 this month'}</Typography>
+            }
         />
     ) as ReactNode;
 };

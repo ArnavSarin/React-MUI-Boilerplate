@@ -6,4 +6,16 @@
   align-items: center;
   justify-content: space-around;
   background-color: #F9FBFF;
+
+  .headerContainer {
+    @include util.flex-row;
+    height: 4em;
+    padding: 1em;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.sideNavHeaderContainer {
+  @include util.flex-row;
 }

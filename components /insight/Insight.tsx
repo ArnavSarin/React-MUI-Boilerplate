@@ -7,8 +7,13 @@ const Insight = ({ icon, title, primaryText, secondaryText }: InsightProps) => {
         <Stack direction="row" spacing={3} className={styles.insightContainer}>
             <Avatar className={styles.insightAvatar}>{icon && icon}</Avatar>
             <Stack direction="column">
-                <Typography className={styles.insightTitle}>{title}</Typography>
-                <Typography className={styles.insightPrimary}>
+                <Typography className={styles.insightTitle} variant={'h4'}>
+                    {title}
+                </Typography>
+                <Typography
+                    className={styles.insightPrimaryText}
+                    variant={'h2'}
+                >
                     {primaryText}
                 </Typography>
                 {secondaryText}

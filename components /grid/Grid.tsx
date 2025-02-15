@@ -66,7 +66,7 @@ const Grid = ({
         <Stack direction="column" className={styles.gridContainer}>
             <Stack>
                 <Box className={styles.searchContainer}>
-                    <Typography variant={'h1'}>{title}</Typography>
+                    <Typography variant={'h2'}>{title}</Typography>
                     <TextField
                         className={styles.search}
                         name="Search"

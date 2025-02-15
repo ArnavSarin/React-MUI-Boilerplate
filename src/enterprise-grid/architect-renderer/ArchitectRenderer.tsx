@@ -8,10 +8,10 @@ const ArchitectRenderer = (params: CustomCellRendererProps) => {
     return (
         <Button className={styles.architectContainer}>
             <Box className={styles.textContainer}>
-                <Typography className={styles.primaryText} variant={'h3'}>
+                <Typography className={styles.primaryText} variant={'h4'}>
                     {params.value}
                 </Typography>
-                <Typography className={styles.secondaryText} variant={'h4'}>
+                <Typography className={styles.secondaryText} variant={'h5'}>
                     Position
                 </Typography>
             </Box>

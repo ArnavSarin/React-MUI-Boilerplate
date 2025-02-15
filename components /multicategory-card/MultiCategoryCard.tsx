@@ -13,13 +13,9 @@ const MultiCategoryCard = ({
     ...props
 }: MultiCategoryCardProps) => {
     return (
-        <Card {...props}>
+        <Card className={styles.card} {...props}>
             <CardContent className={styles.cardContent}>
-                <Stack
-                    direction={direction ?? 'row'}
-                    spacing={spacing ?? 2}
-                    styles={styles.contentContainer}
-                >
+                <Stack direction={direction ?? 'row'} spacing={spacing ?? 2}>
                     {categoryList.map(
                         (item, index) =>
                             (
@@ -29,10 +25,10 @@ const MultiCategoryCard = ({
                                         <Divider
                                             orientation={
                                                 (direction &&
-                                                    direction === 'column') ||
-                                                direction === 'column-reverse'
-                                                    ? 'horizontal'
-                                                    : 'vertical'
+                                                    direction === 'row') ||
+                                                direction === 'row-reverse'
+                                                    ? 'vertical'
+                                                    : 'horizontal'
                                             }
                                             variant="middle"
                                         />

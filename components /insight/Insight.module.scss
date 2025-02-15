@@ -5,11 +5,15 @@
   @include util.flex-center;
 
   .insightAvatar {
-    height: 3em;
-    width: 3em;
+    height: 4em;
+    width: 4em;
   }
 
-  .insightTitle {}
+  .insightTitle {
+    color: #B5B7C0;
+  }
 
-  .insightPrimary {}
+  .insightPrimaryText {
+    color: #000000;
+  }
 }

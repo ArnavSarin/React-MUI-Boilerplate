@@ -28,7 +28,7 @@ const StatusRenderer = (params: CustomCellRendererProps) => {
             className={styles.statusContainer}
             sx={{ backgroundColor: color, border: stroke }}
         >
-            <Typography variant={'h3'} sx={{ color: textColor }}>
+            <Typography variant={'h4'} sx={{ color: textColor }}>
                 {params.value}
             </Typography>
         </Box>

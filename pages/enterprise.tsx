@@ -1,7 +1,6 @@
 import * as React from 'react';
 import SideNavigation from '../components /side-navigation/SideNavigation';
-import { Button, Stack } from '@mui/material';
-import Link from '@mui/material/Link';
+import { Box, IconButton, Stack, Typography, Link } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
 import enterpriseTheme from '../theme/enterprise';
 import EnterpriseGrid from '../src/enterprise-grid/EnterpriseGrid';
@@ -15,13 +14,24 @@ import {
     FundingIcon,
     HelpIcon,
     ProjectsIcon,
+    SocialBrickIcon,
 } from '../assets/Icons';
+import HomeIcon from '@mui/icons-material/Home';
 
 export default function Enterprise() {
+    const SideNavHeader = () => {
+        return (
+            <Box className={styles.sideNavHeaderContainer}>
+                <SocialBrickIcon />
+            </Box>
+        );
+    };
+
     return (
         <ThemeProvider theme={enterpriseTheme}>
             <SideNavigation
                 open={true}
+                logoBox={<SideNavHeader />}
                 navigationList={
                     [
                         {
@@ -53,14 +63,30 @@ export default function Enterprise() {
                             spacing={2}
                             className={styles.mainContainer}
                         >
-                            <Button
-                                variant="contained"
-                                component={Link}
-                                noLinkStyle
-                                href="/"
+                            <Stack
+                                direction="row"
+                                className={styles.headerContainer}
                             >
-                                Go to the home page
-                            </Button>
+                                <Typography variant={'h1'}>
+                                    Hello Company Name
+                                </Typography>
+                                <IconButton
+                                    variant="contained"
+                                    component={Link}
+                                    noLinkStyle
+                                    href="/"
+                                >
+                                    <HomeIcon
+                                        sx={{
+                                            color: '#9197B3',
+                                            height: '2em',
+                                            width: '2em',
+                                            border: '2px solid #9197B3',
+                                            borderRadius: '100px',
+                                        }}
+                                    />
+                                </IconButton>
+                            </Stack>
                             <EnterpriseInsightsCard />
                             <EnterpriseGrid />
                         </Stack>

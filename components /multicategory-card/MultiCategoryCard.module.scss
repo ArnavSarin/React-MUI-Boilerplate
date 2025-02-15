@@ -1,10 +1,12 @@
 @use "../../mixins/util.module" as util;
 
-.cardContent {
-  @include util.dimension-fill;
-  .contentContainer {
+.card {
+  @include util.border-base;
+  height: 12em;
+
+  .cardContent {
     @include util.dimension-fill;
-    align-items: center;
-    justify-content: space-around;
+    align-content: center;
+
   }
 }
