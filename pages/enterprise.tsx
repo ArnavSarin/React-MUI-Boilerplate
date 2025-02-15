@@ -14,18 +14,17 @@ import {
     FundingIcon,
     HelpIcon,
     ProjectsIcon,
-    SocialBrickIcon,
 } from '../assets/Icons';
 import HomeIcon from '@mui/icons-material/Home';
 
 export default function Enterprise() {
-    const SideNavHeader = () => {
-        return (
-            <Box className={styles.sideNavHeaderContainer}>
-                <SocialBrickIcon />
-            </Box>
-        );
-    };
+    // const SideNavHeader = () => {
+    //     return (
+    //         <Box className={styles.sideNavHeaderContainer}>
+    //             <SocialBrickIcon />
+    //         </Box>
+    //     );
+    // };
 
     return (
         <ThemeProvider theme={enterpriseTheme}>
@@ -68,7 +67,7 @@ export default function Enterprise() {
                                 className={styles.headerContainer}
                             >
                                 <Typography variant={'h1'}>
-                                    Hello Company Name
+                                    Hello Company Name! 👋🏼
                                 </Typography>
                                 <IconButton
                                     variant="contained"
