@@ -12,7 +12,7 @@ const ArchitectRenderer = (params: CustomCellRendererProps) => {
                     {params.value}
                 </Typography>
                 <Typography className={styles.secondaryText} variant={'h5'}>
-                    Position
+                    Principal Architect
                 </Typography>
             </Box>
             <ChevronRightIcon className={styles.chevron} />

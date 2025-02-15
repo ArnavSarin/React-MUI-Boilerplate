@@ -85,6 +85,13 @@ export const baseThemeOptions = {
                 },
             },
         },
+        MuiTextField: {
+            styleOverrides: {
+                root: {
+                    backgroundColor: '#F9FBFF',
+                },
+            },
+        },
     },
 };
 

@@ -31,7 +31,7 @@ export default function Enterprise() {
         <ThemeProvider theme={enterpriseTheme}>
             <SideNavigation
                 open={true}
-                logoBox={<SideNavHeader />}
+                // logoBox={<SideNavHeader />}
                 navigationList={
                     [
                         {
