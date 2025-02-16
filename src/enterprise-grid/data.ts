@@ -7,7 +7,7 @@ export const enterpriseGridData = () => {
             State: 'Indianapolis',
             Country: 'United States',
             Started: new Date('2023-10-22'),
-            Architect: 'Person A',
+            Architect: { name: 'Irin Abraham', position: 'Lead Architect' },
             Status: 'Open for Bids',
         },
         {
@@ -15,7 +15,7 @@ export const enterpriseGridData = () => {
             State: 'Andhra Pradesh',
             Country: 'India',
             Started: new Date('2023-10-22'),
-            Architect: 'Person B',
+            Architect: { name: 'Aarav Patel', position: 'Urban Planner' },
             Status: 'Complete',
         },
         {
@@ -23,7 +23,7 @@ export const enterpriseGridData = () => {
             State: 'Eastern Cape',
             Country: 'South Africa',
             Started: new Date('2023-10-22'),
-            Architect: 'Person C',
+            Architect: { name: 'Aarnik Amin', position: 'Junior Secretary' },
             Status: 'Inactive',
         },
         {
@@ -31,7 +31,10 @@ export const enterpriseGridData = () => {
             State: 'Cusco',
             Country: 'Peru',
             Started: new Date('2022-10-22'),
-            Architect: 'Person D',
+            Architect: {
+                name: 'Sofia Martinez',
+                position: 'Junior Architect',
+            },
             Status: 'Active',
         },
         {
@@ -39,7 +42,10 @@ export const enterpriseGridData = () => {
             State: 'Bali',
             Country: 'Indonesia',
             Started: new Date('2023-10-22'),
-            Architect: 'Person E',
+            Architect: {
+                name: 'Noah Williams',
+                position: 'Design Architect',
+            },
             Status: 'Open for Bids',
         },
         {
@@ -47,7 +53,7 @@ export const enterpriseGridData = () => {
             State: 'Queensland',
             Country: 'Australia',
             Started: new Date('2023-11-15'),
-            Architect: 'Person F',
+            Architect: { name: 'Amelia White', position: 'Interior Architect' },
             Status: 'Active',
         },
         {
@@ -55,7 +61,10 @@ export const enterpriseGridData = () => {
             State: 'Bavaria',
             Country: 'Germany',
             Started: new Date('2022-09-10'),
-            Architect: 'Person G',
+            Architect: {
+                name: 'Hugo Schmidt',
+                position: 'Residential Architect',
+            },
             Status: 'Complete',
         },
         {
@@ -63,7 +72,10 @@ export const enterpriseGridData = () => {
             State: 'British Columbia',
             Country: 'Canada',
             Started: new Date('2023-05-30'),
-            Architect: 'Person H',
+            Architect: {
+                name: 'Olivia Taylor',
+                position: 'Commercial Architect',
+            },
             Status: 'Inactive',
         },
         {
@@ -71,7 +83,7 @@ export const enterpriseGridData = () => {
             State: 'Rio de Janeiro',
             Country: 'Brazil',
             Started: new Date('2023-07-12'),
-            Architect: 'Person I',
+            Architect: { name: 'Mateo Silva', position: 'Landscape Architect' },
             Status: 'Active',
         },
         {
@@ -79,7 +91,10 @@ export const enterpriseGridData = () => {
             State: 'Lombardy',
             Country: 'Italy',
             Started: new Date('2021-08-22'),
-            Architect: 'Person J',
+            Architect: {
+                name: 'Giovanni Rossi',
+                position: 'Restoration Architect',
+            },
             Status: 'Complete',
         },
         {
@@ -87,7 +102,7 @@ export const enterpriseGridData = () => {
             State: 'Hokkaido',
             Country: 'Japan',
             Started: new Date('2023-12-05'),
-            Architect: 'Person K',
+            Architect: { name: 'Haruto Tanaka', position: 'Urban Designer' },
             Status: 'Inactive',
         },
         {
@@ -95,7 +110,10 @@ export const enterpriseGridData = () => {
             State: 'Western Cape',
             Country: 'South Africa',
             Started: new Date('2022-06-18'),
-            Architect: 'Person L',
+            Architect: {
+                name: 'Emma Merwe',
+                position: 'Healthcare Architect',
+            },
             Status: 'Open for Bids',
         },
         {
@@ -103,7 +121,7 @@ export const enterpriseGridData = () => {
             State: 'Île-de-France',
             Country: 'France',
             Started: new Date('2023-03-25'),
-            Architect: 'Person M',
+            Architect: { name: 'Louis Dupont', position: 'Concept Architect' },
             Status: 'Complete',
         },
         {
@@ -111,7 +129,10 @@ export const enterpriseGridData = () => {
             State: 'Maharashtra',
             Country: 'India',
             Started: new Date('2022-04-17'),
-            Architect: 'Person N',
+            Architect: {
+                name: 'Priya Sharma',
+                position: 'Industrial Architect',
+            },
             Status: 'Inactive',
         },
         {
@@ -119,7 +140,7 @@ export const enterpriseGridData = () => {
             State: 'New South Wales',
             Country: 'Australia',
             Started: new Date('2023-02-14'),
-            Architect: 'Person O',
+            Architect: { name: 'Liam Anderson', position: 'Project Architect' },
             Status: 'Active',
         },
     ]);

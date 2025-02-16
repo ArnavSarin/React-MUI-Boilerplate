@@ -14,6 +14,7 @@ import {
     FundingIcon,
     HelpIcon,
     ProjectsIcon,
+    // SocialBrickIcon,
 } from '../assets/Icons';
 import HomeIcon from '@mui/icons-material/Home';
 
@@ -67,7 +68,7 @@ export default function Enterprise() {
                                 className={styles.headerContainer}
                             >
                                 <Typography variant={'h1'}>
-                                    Hello Company Name! 👋🏼
+                                    Hello Company Name 👋🏼
                                 </Typography>
                                 <IconButton
                                     variant="contained"

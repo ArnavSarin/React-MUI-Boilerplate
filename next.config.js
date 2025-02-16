@@ -10,13 +10,17 @@ module.exports = {
         });
         //TODO: REMOVE THIS AND URL-LOADER AND FILE-LOADER FROM PACKAGE.JSON
         //TODO: FIX ALL COLORS TO BE IN ONE AREA FOR THEMEING
-        config.module.rules.push({
-            test: /\.(jpe?g|gif|png)$/i,
-            loader: 'url-loader',
-            options: {
-                limit: 10000,
-            },
-        });
+        // config.module.rules.push({
+        //     test: /\.(jpe?g|gif|png)$/i,
+        //     loader: 'url-loader',
+        //     options: {
+        //         limit: 10000,
+        //     },
+        // });
+        // config.module.rules.push({
+        //     test: /\.(png|jpg|jpeg|gif)$/i,
+        //     type: 'asset/resource',
+        // });
         return config;
     },
 };

@@ -11,9 +11,9 @@ export default function Home() {
                 variant="contained"
                 component={Link}
                 noLinkStyle
-                href="/architects"
+                href="/application"
             >
-                Go to the Architects page
+                Go to the User Application page
             </Button>
             <Button
                 variant="contained"
@@ -22,6 +22,14 @@ export default function Home() {
                 href="/enterprise"
             >
                 Go to the Enterprise page
+            </Button>
+            <Button
+                variant="contained"
+                component={Link}
+                noLinkStyle
+                href="/architects"
+            >
+                Go to the Architects page
             </Button>
             <Button
                 variant="contained"

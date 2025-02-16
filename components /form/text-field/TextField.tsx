@@ -1,6 +1,6 @@
 import { TextField as MuiTextField } from '@mui/material';
 import { TextFieldProps } from './types';
-import { useController, useForm } from 'react-hook-form';
+import { useController, useForm, useFormContext } from 'react-hook-form';
 import { mergeRefs } from 'react-merge-refs';
 
 const TextField = ({
@@ -15,14 +15,14 @@ const TextField = ({
     onBlur,
     ...props
 }: TextFieldProps) => {
-    const {
-        control,
-        formState: { errors },
-    } = useForm();
+    const { control } = useFormContext() ?? useForm();
 
-    const { field } = useController({
+    const {
+        field,
+        fieldState: { error },
+    } = useController({
         name: name,
-        control,
+        control: control,
     });
 
     return (
@@ -31,8 +31,8 @@ const TextField = ({
             variant={variant ?? 'outlined'}
             size={size ?? 'small'}
             fullWidth={fullWidth ?? true}
-            error={!!errors.name}
-            helperText={errors.name ? errors.name.message : ''}
+            error={!!error}
+            helperText={error?.message}
             ref={ref ? mergeRefs([field.ref, ref]) : field.ref}
             value={field.value}
             onChange={(event) => {

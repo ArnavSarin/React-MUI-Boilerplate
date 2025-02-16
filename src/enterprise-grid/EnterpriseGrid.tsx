@@ -4,6 +4,7 @@ import { enterpriseGridData } from './data';
 import StatusRenderer from './status-renderer/StatusRenderer';
 import ArchitectRenderer from './architect-renderer/ArchitectRenderer';
 import styles from './EnterpriseGrid.module.scss';
+import Architect from '../../theme/architect';
 
 const EnterpriseGrid = () => {
     const { rowData, setRowData } = enterpriseGridData();
@@ -12,6 +13,7 @@ const EnterpriseGrid = () => {
         { field: 'Project Name' },
         {
             field: 'Architect',
+            cellDataType: Architect,
             cellRenderer: ArchitectRenderer,
         },
         { field: 'State' },

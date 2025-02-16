@@ -1,0 +1,18 @@
+@use "../mixins/util.module" as util;
+
+.applicationContainer {
+  @include util.flex-row;
+  @include util.flex-center;
+  @include util.dimension-fill;
+
+  .form {
+    @include util.flex-row;
+    @include util.flex-center;
+    @include util.border-base;
+
+    .field {
+      @include util.dimension-fill;
+    }
+  }
+
+}

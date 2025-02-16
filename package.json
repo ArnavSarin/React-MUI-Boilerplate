@@ -13,6 +13,7 @@
     "@emotion/react": "^11.14.0",
     "@emotion/server": "latest",
     "@emotion/styled": "^11.14.0",
+    "@hookform/resolvers": "^4.1.0",
     "@mui/icons-material": "^6.4.3",
     "@mui/material": "^6.4.3",
     "@mui/material-nextjs": "latest",
@@ -22,7 +23,8 @@
     "react-dom": "latest",
     "react-hook-form": "^7.54.2",
     "react-merge-refs": "^2.1.1",
-    "sass": "^1.84.0"
+    "sass": "^1.84.0",
+    "yup": "^1.6.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.20.0",
@@ -36,11 +38,9 @@
     "eslint-plugin-prettier": "^5.2.3",
     "eslint-plugin-react": "^7.37.4",
     "eslint-plugin-react-hooks": "^5.1.0",
-    "file-loader": "^6.2.0",
     "globals": "^15.14.0",
     "prettier": "^3.4.2",
     "typescript": "latest",
-    "typescript-eslint": "^8.23.0",
-    "url-loader": "^4.1.1"
+    "typescript-eslint": "^8.23.0"
   }
 }

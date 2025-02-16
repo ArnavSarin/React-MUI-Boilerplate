@@ -4,10 +4,11 @@ import DashboardSVG from './svg/Dashboard.svg';
 import FundingSVG from './svg/Funding.svg';
 import HelpSVG from './svg/Help.svg';
 import ProjectsSVG from './svg/Projects.svg';
-// import SocialBrick from './png/SocialBrick.png';
+// import Image from 'next/image';
+// import SocialBrickPNG from './png/SocialBrick.png';
 //
 // export const SocialBrickIcon = () => {
-//     return <img src={SocialBrick} alt="logo" />;
+//     return <Image src={SocialBrickPNG} alt="logo" width="200" height={'200'} />;
 // };
 
 export const AccountHistoryIcon = () => {
