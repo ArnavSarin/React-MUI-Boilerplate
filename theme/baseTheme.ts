@@ -86,6 +86,9 @@ export const baseThemeOptions = {
             },
         },
         MuiTextField: {
+            defaultProps: {
+                InputLabelProps: { shrink: true },
+            },
             styleOverrides: {
                 root: {
                     backgroundColor: '#F9FBFF',

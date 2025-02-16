@@ -4,12 +4,13 @@
   @include util.flex-row;
   @include util.flex-center;
   @include util.dimension-fill;
+  background-color: #F9FBFF;
 
-  .form {
+  .identityContactGrid {
     @include util.flex-row;
     @include util.flex-center;
     @include util.border-base;
-
+    padding: 2em;
     .field {
       @include util.dimension-fill;
     }

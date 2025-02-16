@@ -1,5 +1,5 @@
 import { FormProvider, useForm } from 'react-hook-form';
-import { Button, Grid2, Stack } from '@mui/material';
+import { Button, Grid2, Stack, Typography } from '@mui/material';
 import styles from './Application.module.scss';
 import TextField from '../components /form/text-field/TextField';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -11,11 +11,17 @@ const application = () => {
     return (
         <Stack className={styles.applicationContainer}>
             <FormProvider {...methods}>
-                <form
-                    className={styles.form}
-                    onSubmit={methods.handleSubmit(onSubmit)}
-                >
-                    <Grid2 container spacing={2}>
+                <form onSubmit={methods.handleSubmit(onSubmit)}>
+                    <Grid2
+                        container
+                        className={styles.identityContactGrid}
+                        spacing={4}
+                    >
+                        <Grid2 item size={12}>
+                            <Typography variant={'h1'}>
+                                Identity & Contact
+                            </Typography>
+                        </Grid2>
                         <Grid2 item size={4}>
                             <TextField
                                 name={'FullName'}
