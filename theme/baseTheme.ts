@@ -71,13 +71,6 @@ export const baseThemeOptions = {
                 },
             },
         },
-        MuiAvatar: {
-            styleOverrides: {
-                root: {
-                    backgroundColor: '#D3FFE7',
-                },
-            },
-        },
         MuiDivider: {
             styleOverrides: {
                 root: {

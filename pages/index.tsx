@@ -11,7 +11,7 @@ export default function Home() {
                 variant="contained"
                 component={Link}
                 noLinkStyle
-                href="/application"
+                href="/enterprise-appl"
             >
                 Go to the User Application page
             </Button>

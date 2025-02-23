@@ -1,11 +1,14 @@
 import { InsightProps } from './types';
-import { Stack, Typography, Avatar } from '@mui/material';
+import { Stack, Typography } from '@mui/material';
 import styles from './Insight.module.scss';
+import { InsightAvatar } from '../styled/Avatar';
 
 const Insight = ({ icon, title, primaryText, secondaryText }: InsightProps) => {
     return (
         <Stack direction="row" spacing={3} className={styles.insightContainer}>
-            <Avatar className={styles.insightAvatar}>{icon && icon}</Avatar>
+            <InsightAvatar className={styles.insightAvatar}>
+                {icon && icon}
+            </InsightAvatar>
             <Stack direction="column">
                 <Typography className={styles.insightTitle} variant={'h4'}>
                     {title}

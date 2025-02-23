@@ -1,0 +1,28 @@
+@use "../../mixins/util.module" as util;
+
+.applicationContainer {
+  @include util.flex-col;
+  background-color: #F9FBFF;
+
+  .multiAvatarContainer {
+    @include util.flex-row;
+    @include util.flex-center;
+    height: 30%;
+
+    .avatarContainer {
+      @include util.flex-col;
+      @include util.flex-center;
+      gap: 0.5em;
+
+      .insightAvatar {
+        height: 3em;
+        width: 3em;
+      }
+    }
+  }
+
+  .formContainer {
+    @include util.flex-col;
+    align-items: center;
+  }
+}

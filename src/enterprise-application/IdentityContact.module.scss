@@ -1,0 +1,11 @@
+@use "../../mixins/util.module" as util;
+
+.identityContactGrid {
+  @include util.border-base;
+  width: 60%;
+  padding: 2em 4em;
+
+  .field {
+    @include util.dimension-fill;
+  }
+}
