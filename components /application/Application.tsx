@@ -15,6 +15,8 @@ const Application = ({ schema, applicationList }: ApplicationProps<any>) => {
 
     const [formFields, setFormFields] = useState<>({});
 
+    const [page, setPage] = useState<number>(0);
+
     //TODO: ADD A PREV AND FIX THIS MERGING OF FIELDS
     const onSubmit = (data) => {
         setFormFields({ ...formFields, ...data });
@@ -45,13 +47,11 @@ const Application = ({ schema, applicationList }: ApplicationProps<any>) => {
                     className={styles.formContainer}
                     onSubmit={methods.handleSubmit(onSubmit)}
                 >
-                    {applicationList.map((item) => (
-                        <ApplicationPage
-                            title={item.title}
-                            icon={item.icon}
-                            children={item.children}
-                        />
-                    ))}
+                    <ApplicationPage
+                        title={applicationList[page].title}
+                        icon={applicationList[page].icon}
+                        children={applicationList[page].children}
+                    />
                 </form>
             </FormProvider>
         </Stack>

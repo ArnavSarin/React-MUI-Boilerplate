@@ -1,6 +1,6 @@
 @use "../../mixins/util.module" as util;
 
-.identityContactGrid {
+.applicationGrid {
   @include util.border-base;
   width: 60%;
   padding: 2em 4em;
