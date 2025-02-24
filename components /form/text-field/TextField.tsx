@@ -34,7 +34,7 @@ const TextField = ({
             error={!!error}
             helperText={error?.message}
             ref={ref ? mergeRefs([field.ref, ref]) : field.ref}
-            value={field.value}
+            value={field.value ?? ''}
             onChange={(event) => {
                 if (onChange) {
                     onChange(event);

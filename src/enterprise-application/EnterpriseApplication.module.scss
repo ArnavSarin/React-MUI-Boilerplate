@@ -1,0 +1,5 @@
+@use "../../mixins/util.module" as util;
+
+.field {
+  @include util.dimension-fill;
+}
