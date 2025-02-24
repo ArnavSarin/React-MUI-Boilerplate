@@ -8,6 +8,6 @@ export const InsightAvatar = styled(Avatar)<AvatarProps>(({ theme }) => ({
 
 export const ApplicationAvatar = styled(Avatar)<AvatarProps>(
     ({ selected }) => ({
-        backgroundColor: selected ? '#E2B281' : '#F9FBFF',
+        backgroundColor: selected ? '#E2B281' : '#9197B3',
     })
 );
