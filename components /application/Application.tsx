@@ -30,29 +30,33 @@ const ApplicationPage = ({
                         <Typography variant={'h1'}>{title}</Typography>
                     </Grid2>
                     {children}
-                    <Grid2 size={6}>
-                        {page > 0 &&
-                            ((
-                                <Button
-                                    className={styles.field}
-                                    variant="contained"
-                                    onClick={onPrev}
-                                >
-                                    Prev
-                                </Button>
-                            ) as ReactElement)}
-                    </Grid2>
-                    <Grid2 size={6}>
-                        {page < totalPages - 1 &&
-                            ((
-                                <Button
-                                    className={styles.field}
-                                    variant="contained"
-                                    type="submit"
-                                >
-                                    Next
-                                </Button>
-                            ) as ReactElement)}
+                    <Grid2 size={12}>
+                        <Stack direction={'row'} gap={2}>
+                            {
+                                (
+                                    <Button
+                                        className={styles.field}
+                                        variant="contained"
+                                        onClick={onPrev}
+                                        disabled={page === 0}
+                                    >
+                                        Prev
+                                    </Button>
+                                ) as ReactElement
+                            }
+                            {
+                                (
+                                    <Button
+                                        className={styles.field}
+                                        variant="contained"
+                                        type="submit"
+                                        disabled={page === totalPages - 1}
+                                    >
+                                        Next
+                                    </Button>
+                                ) as ReactElement
+                            }
+                        </Stack>
                     </Grid2>
                 </Grid2>
             </form>
