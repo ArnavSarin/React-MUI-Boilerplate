@@ -38,6 +38,7 @@ export const BusinessAddress = () => {
                     className={styles.field}
                     id={'City'}
                     label={'City'}
+                    placeholder={'e.g. San Francisco'}
                 />
             </Grid2>
             <Grid2 item size={6}>
@@ -46,6 +47,7 @@ export const BusinessAddress = () => {
                     className={styles.field}
                     id={'StateProvinceRegion'}
                     label={'State/Province/Region'}
+                    placeholder={'e.g. California'}
                 />
             </Grid2>
             <Grid2 item size={6}>
@@ -54,6 +56,7 @@ export const BusinessAddress = () => {
                     className={styles.field}
                     id={'Country'}
                     label={'Country'}
+                    placeholder={'e.g. United States'}
                 />
             </Grid2>
         </>
