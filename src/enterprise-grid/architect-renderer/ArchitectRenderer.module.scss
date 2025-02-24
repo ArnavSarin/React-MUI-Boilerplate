@@ -6,7 +6,7 @@
   height: 80%;
   width: 100%;
   gap: 1em;
-  background-color: #F9FBFF;
+  background-color: util.$colors---background-off-white;
   border-radius: 4px;
 
   .textContainer{
@@ -16,14 +16,14 @@
     height: 100%;
     padding-left: 1em;
     .primaryText {
-      color: #000000;
+      color: util.$colors---black;
     }
     .secondaryText {
-      color: #9197B3;
+      color: util.$colors---helper-text-gray;
     }
   }
 
   .chevron {
-    color: #000000;
+    color: util.$colors---black;
   }
 }

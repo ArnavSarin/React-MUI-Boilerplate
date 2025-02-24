@@ -88,10 +88,13 @@ const Application = ({ applicationList }: ApplicationProps<any>) => {
     return (
         <Stack className={styles.applicationContainer}>
             <Box className={styles.multiAvatarContainer}>
-                {applicationList.map((item) => {
+                {applicationList.map((item, index) => {
                     return (
                         <Box className={styles.avatarContainer}>
-                            <ApplicationAvatar className={styles.insightAvatar}>
+                            <ApplicationAvatar
+                                className={styles.insightAvatar}
+                                selected={page === index}
+                            >
                                 {item.icon}
                             </ApplicationAvatar>
                             <Typography variant={'h4'}>{item.title}</Typography>

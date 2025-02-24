@@ -11,7 +11,7 @@
       @include util.dimension-fill;
 
       .sideNavItem {
-        color: #9197B3;
+        color: util.$colors---helper-text-gray;
         width: auto;
         margin: 0.5em;
         padding: unset;

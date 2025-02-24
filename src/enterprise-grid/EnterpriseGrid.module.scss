@@ -1,9 +1,13 @@
+@use "../../mixins/util.module" as util;
+
+//TODO: CHECK WHY COLORS FROM COLORS.MODULE.SCSS DOESNT WORK FOR AG GRID
+
 .grid {
   --ag-spacing: 8px;
   --ag-wrapper-border: true;
   --ag-row-height: 50px;
 
-  --ag-border-color: #00000000;
+  --ag-border-color: util.$colors---black;
   --ag-header-row-border: 1px solid #EEEEEE;
   --ag-row-border: 1px solid #EEEEEE;
 
@@ -11,12 +15,12 @@
   --ag-header-font-size: 14px;
   --ag-font-family: inherit;
   --ag-header-text-color: #B5B7C0;
-  --ag-cell-text-color: #000000;
+  --ag-cell-text-color: util.$colors---black;
   --ag-accent-color: #008CFF;
 
-  --ag-background-color: #FFFFFF;
-  --ag-chrome-background-color: #FFFFFF;
-  --ag-odd-row-background-color: #FFFFFF;
-  --ag-foreground-color: #000000;
+  --ag-background-color: util.$colors---white;
+  --ag-chrome-background-color: util.$colors---white;
+  --ag-odd-row-background-color: util.$colors---white;
+  --ag-foreground-color: util.$colors---black;
   --ag-browser-color-scheme: dark;
 }

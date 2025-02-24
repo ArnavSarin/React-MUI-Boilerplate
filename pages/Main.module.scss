@@ -5,7 +5,7 @@
   padding: 2em;
   align-items: center;
   justify-content: space-around;
-  background-color: #F9FBFF;
+  background-color: util.$colors---background-off-white;
 
   .headerContainer {
     @include util.flex-row;

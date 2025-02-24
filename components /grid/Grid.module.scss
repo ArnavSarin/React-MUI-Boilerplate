@@ -3,7 +3,7 @@
 .gridContainer {
   @include util.flex-col;
   @include util.border-base;
-  background-color: #FFFFFF;
+  background-color: util.$colors---white;
   padding: 2em;
 
   .searchContainer {
