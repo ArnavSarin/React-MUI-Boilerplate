@@ -23,7 +23,7 @@ export const IdentityContact = () => {
                     placeholder={'Doe'}
                 />
             </Grid2>
-            <Grid2 size={4}>
+            <Grid2 size={6}>
                 <TextField
                     name={'Position'}
                     className={styles.field}
@@ -32,7 +32,7 @@ export const IdentityContact = () => {
                     placeholder={'Fundraising Chair'}
                 />
             </Grid2>
-            <Grid2 size={4}>
+            <Grid2 size={6}>
                 <TextField
                     name={'Email'}
                     className={styles.field}
@@ -41,7 +41,7 @@ export const IdentityContact = () => {
                     placeholder={'john@example.com'}
                 />
             </Grid2>
-            <Grid2 size={4}>
+            <Grid2 size={6}>
                 <TextField
                     name={'PhoneNumber'}
                     className={styles.field}

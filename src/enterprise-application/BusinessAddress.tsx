@@ -29,7 +29,7 @@ export const BusinessAddress = () => {
                     className={styles.field}
                     id={'AddressLine2'}
                     label={'Address Line 2'}
-                    placeholder={'Apt, suit, unit, building, floor, etc.'}
+                    placeholder={'Apt, suite, unit, building, floor, etc.'}
                 />
             </Grid2>
             <Grid2 item size={6}>
